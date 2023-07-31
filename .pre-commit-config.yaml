@@ -11,3 +11,14 @@ repos:
   hooks:
   - id: flake8
     args: [--ignore=E501]
+  - repo: https://github.com/pycqa/isort
+  rev: ''  # Specify a specific version/tag/commit or leave empty for the latest version
+  hooks:
+    - id: isort
+      args: [--apply]
+      
+- repo: https://github.com/myint/autoflake
+  rev: ''  # Specify a specific version/tag/commit or leave empty for the latest version
+  hooks:
+    - id: autoflake
+      args: [--remove-all-unused-imports, --remove-duplicate-keys, --expand-star-imports]
